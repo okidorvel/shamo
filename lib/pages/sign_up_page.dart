@@ -28,7 +28,6 @@ class SignUpPage extends StatelessWidget {
         ),
       );
     }
-
     Widget emailInput() {
       return Container(
         margin: EdgeInsets.only(
@@ -79,7 +78,6 @@ class SignUpPage extends StatelessWidget {
         ),
       );
     }
-
     Widget passwordInput() {
       return Container(
         margin: EdgeInsets.only(
@@ -131,7 +129,6 @@ class SignUpPage extends StatelessWidget {
         ),
       );
     }
-
     Widget signInButton() {
       return Container(
         height: 50,
@@ -154,7 +151,6 @@ class SignUpPage extends StatelessWidget {
         ),
       );
     }
-
     Widget footer() {
       return Container(
         margin: EdgeInsets.only(bottom: 30),
