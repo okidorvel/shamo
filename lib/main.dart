@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shamo/pages/home/chat_page.dart';
+import 'package:shamo/pages/home/home_page.dart';
 import 'package:shamo/pages/home/main_page.dart';
+import 'package:shamo/pages/home/profile_page.dart';
+import 'package:shamo/pages/home/wishlist_page.dart';
 import 'package:shamo/pages/sign_in_page.dart';
 import 'package:shamo/pages/sign_up_page.dart';
 import 'package:shamo/pages/splash_page.dart';
@@ -14,10 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/'       : (context) => SplashPage(),
-        '/sign-in': (context) => SignInPage(),
-        '/sign-up': (context) => SignUpPage(),
-        '/home'   : (context) => MainPage(),
+        '/'             : (context) => SplashPage(),
+        '/sign-in'      : (context) => SignInPage(),
+        '/sign-up'      : (context) => SignUpPage(),
+        '/home'         : (context) => MainPage(),
       },
     );
   }
