@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shamo/theme.dart';
+import 'package:shamo/widgets/chat_tile.dart';
 
 class ChatPage extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class ChatPage extends StatelessWidget {
       );
     }
 
-    Widget content() {
+    Widget emptyChat() {
       return Expanded(
         child: Container(
           width: double.infinity,
@@ -31,7 +32,6 @@ class ChatPage extends StatelessWidget {
               Image.asset(
                 'assets/icon_no_message.png',
                 width: 80,
-                height: 80,
               ),
               SizedBox(
                 height: 20,
@@ -44,7 +44,7 @@ class ChatPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 12,
               ),
               Text(
                 'You have never done a transaction',
@@ -58,14 +58,17 @@ class ChatPage extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 10,
-                        horizontal: 24,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 10,
+                    ),
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        12,
                       ),
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      )),
+                    ),
+                  ),
                   child: Text(
                     'Explore Store',
                     style: primaryTextStyle.copyWith(
@@ -75,6 +78,24 @@ class ChatPage extends StatelessWidget {
                   ),
                 ),
               )
+            ],
+          ),
+        ),
+      );
+    }
+
+    Widget content() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          color: backgroundColor3,
+          child: ListView(
+            padding: EdgeInsets.symmetric(
+              horizontal: defaultMargin,
+            ),
+            children: [
+              ChatTile(),
+              ChatTile(),
             ],
           ),
         ),
